@@ -1,8 +1,8 @@
 ..\output\list.o: ..\FreeRTOS\source\list.c
-..\output\list.o: D:\keil538\ARM\ARM_Compiler_5\Bin\..\include\stdlib.h
+..\output\list.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\output\list.o: ..\FreeRTOS\include\FreeRTOS.h
-..\output\list.o: D:\keil538\ARM\ARM_Compiler_5\Bin\..\include\stddef.h
-..\output\list.o: D:\keil538\ARM\ARM_Compiler_5\Bin\..\include\stdint.h
+..\output\list.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\output\list.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\list.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\output\list.o: ..\FreeRTOS\include\projdefs.h
 ..\output\list.o: ..\FreeRTOS\include\portable.h

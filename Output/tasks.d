@@ -1,9 +1,9 @@
 ..\output\tasks.o: ..\FreeRTOS\source\tasks.c
-..\output\tasks.o: D:\keil538\ARM\ARM_Compiler_5\Bin\..\include\stdlib.h
-..\output\tasks.o: D:\keil538\ARM\ARM_Compiler_5\Bin\..\include\string.h
+..\output\tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\output\tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\output\tasks.o: ..\FreeRTOS\include\FreeRTOS.h
-..\output\tasks.o: D:\keil538\ARM\ARM_Compiler_5\Bin\..\include\stddef.h
-..\output\tasks.o: D:\keil538\ARM\ARM_Compiler_5\Bin\..\include\stdint.h
+..\output\tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\output\tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\tasks.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\output\tasks.o: ..\FreeRTOS\include\projdefs.h
 ..\output\tasks.o: ..\FreeRTOS\include\portable.h
