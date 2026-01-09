@@ -20,6 +20,8 @@
 #include "stm32f4xx.h"
 #include "./beep/bsp_beep.h"
 
+
+
 void Delay(__IO uint32_t nCount); 
 
 /**
@@ -33,7 +35,7 @@ int main(void)
   SystemClock_Config();
 
 	/*蜂鸣器端口初始化 */
-	BEEP_GPIO_Config(); 
+	// BEEP_GPIO_Config(); 
 
 	/* 控制IO */
 	while (1)
@@ -43,6 +45,8 @@ int main(void)
 
 	}
 }
+
+
 
 void Delay(__IO uint32_t nCount)	 //简单的延时函数
 {

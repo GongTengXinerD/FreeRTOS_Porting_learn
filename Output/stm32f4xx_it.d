@@ -7,7 +7,7 @@
 ..\output\stm32f4xx_it.o: ..\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
 ..\output\stm32f4xx_it.o: ..\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h
 ..\output\stm32f4xx_it.o: ..\Libraries\CMSIS\Include\core_cm4.h
-..\output\stm32f4xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\stm32f4xx_it.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\stm32f4xx_it.o: ..\Libraries\CMSIS\Include\core_cmInstr.h
 ..\output\stm32f4xx_it.o: ..\Libraries\CMSIS\Include\cmsis_armcc.h
 ..\output\stm32f4xx_it.o: ..\Libraries\CMSIS\Include\core_cmFunc.h
@@ -15,7 +15,7 @@
 ..\output\stm32f4xx_it.o: ..\Libraries\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h
 ..\output\stm32f4xx_it.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
 ..\output\stm32f4xx_it.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
-..\output\stm32f4xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\output\stm32f4xx_it.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\output\stm32f4xx_it.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
 ..\output\stm32f4xx_it.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h
 ..\output\stm32f4xx_it.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h
@@ -70,7 +70,7 @@
 ..\output\stm32f4xx_it.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h
 ..\output\stm32f4xx_it.o: ..\User\stm32f4xx_it.h
 ..\output\stm32f4xx_it.o: ..\FreeRTOS\include\FreeRTOS.h
-..\output\stm32f4xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\output\stm32f4xx_it.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\output\stm32f4xx_it.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\output\stm32f4xx_it.o: ..\FreeRTOS\include\projdefs.h
 ..\output\stm32f4xx_it.o: ..\FreeRTOS\include\portable.h

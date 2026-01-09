@@ -83,7 +83,7 @@ NVIC value of 255. */
 #define configLIBRARY_KERNEL_INTERRUPT_PRIORITY	15
 
 
-/*必须要添加的三个宏*/
+/*必须要添加的三个宏（移植核心）*/
 
 #define vPortSVCHandler     SVC_Handler
 #define xPortPendSVHandler  PendSV_Handler

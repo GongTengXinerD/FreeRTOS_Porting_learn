@@ -1,0 +1,13 @@
+..\output\led.o: ..\User\led\led.c
+..\output\led.o: ..\User\led\led.h
+..\output\led.o: ..\FreeRTOS\include\FreeRTOS.h
+..\output\led.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\output\led.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\led.o: ..\FreeRTOS\include\FreeRTOSConfig.h
+..\output\led.o: ..\FreeRTOS\include\projdefs.h
+..\output\led.o: ..\FreeRTOS\include\portable.h
+..\output\led.o: ..\FreeRTOS\include\deprecated_definitions.h
+..\output\led.o: ..\FreeRTOS\portble\RVDS\ARM_CM3\portmacro.h
+..\output\led.o: ..\FreeRTOS\include\mpu_wrappers.h
+..\output\led.o: ..\FreeRTOS\include\task.h
+..\output\led.o: ..\FreeRTOS\include\list.h
