@@ -9,5 +9,3 @@
 ..\output\led.o: ..\FreeRTOS\include\deprecated_definitions.h
 ..\output\led.o: ..\FreeRTOS\portble\RVDS\ARM_CM3\portmacro.h
 ..\output\led.o: ..\FreeRTOS\include\mpu_wrappers.h
-..\output\led.o: ..\FreeRTOS\include\task.h
-..\output\led.o: ..\FreeRTOS\include\list.h

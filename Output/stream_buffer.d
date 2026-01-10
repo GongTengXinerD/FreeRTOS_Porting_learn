@@ -9,6 +9,3 @@
 ..\output\stream_buffer.o: ..\FreeRTOS\include\deprecated_definitions.h
 ..\output\stream_buffer.o: ..\FreeRTOS\portble\RVDS\ARM_CM3\portmacro.h
 ..\output\stream_buffer.o: ..\FreeRTOS\include\mpu_wrappers.h
-..\output\stream_buffer.o: ..\FreeRTOS\include\task.h
-..\output\stream_buffer.o: ..\FreeRTOS\include\list.h
-..\output\stream_buffer.o: ..\FreeRTOS\include\stream_buffer.h

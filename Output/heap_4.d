@@ -10,5 +10,3 @@
 ..\output\heap_4.o: ..\FreeRTOS\include\deprecated_definitions.h
 ..\output\heap_4.o: ..\FreeRTOS\portble\RVDS\ARM_CM3\portmacro.h
 ..\output\heap_4.o: ..\FreeRTOS\include\mpu_wrappers.h
-..\output\heap_4.o: ..\FreeRTOS\include\task.h
-..\output\heap_4.o: ..\FreeRTOS\include\list.h

@@ -9,7 +9,3 @@
 ..\output\timers.o: ..\FreeRTOS\include\deprecated_definitions.h
 ..\output\timers.o: ..\FreeRTOS\portble\RVDS\ARM_CM3\portmacro.h
 ..\output\timers.o: ..\FreeRTOS\include\mpu_wrappers.h
-..\output\timers.o: ..\FreeRTOS\include\task.h
-..\output\timers.o: ..\FreeRTOS\include\list.h
-..\output\timers.o: ..\FreeRTOS\include\queue.h
-..\output\timers.o: ..\FreeRTOS\include\timers.h

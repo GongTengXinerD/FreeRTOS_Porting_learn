@@ -9,4 +9,3 @@
 ..\output\list.o: ..\FreeRTOS\include\deprecated_definitions.h
 ..\output\list.o: ..\FreeRTOS\portble\RVDS\ARM_CM3\portmacro.h
 ..\output\list.o: ..\FreeRTOS\include\mpu_wrappers.h
-..\output\list.o: ..\FreeRTOS\include\list.h

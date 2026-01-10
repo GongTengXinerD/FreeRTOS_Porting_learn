@@ -4,13 +4,13 @@
   * @author  fire
   * @version V1.0
   * @date    2017-xx-xx
-  * @brief   GPIOÊä³ö--Ê¹ÓÃ¹Ì¼þ¿âµãÁÁLEDµÆ
+  * @brief   GPIOï¿½ï¿½ï¿½--Ê¹ï¿½Ã¹Ì¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½LEDï¿½ï¿½
   ******************************************************************************
   * @attention
   *
-  * ÊµÑéÆ½Ì¨:Ò°»ð  STM32 F407 ¿ª·¢°å 
-  * ÂÛÌ³    :http://www.firebbs.cn
-  * ÌÔ±¦    :http://firestm32.taobao.com
+  * Êµï¿½ï¿½Æ½Ì¨:Ò°ï¿½ï¿½  STM32 F407 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+  * ï¿½ï¿½Ì³    :http://www.firebbs.cn
+  * ï¿½Ô±ï¿½    :http://firestm32.taobao.com
   *
   ******************************************************************************
   */
@@ -20,24 +20,26 @@
 #include "stm32f4xx.h"
 #include "./beep/bsp_beep.h"
 
+#include "task.h"
+
 
 
 void Delay(__IO uint32_t nCount); 
 
 /**
-  * @brief  Ö÷º¯Êý
-  * @param  ÎÞ
-  * @retval ÎÞ
+  * @brief  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+  * @param  ï¿½ï¿½
+  * @retval ï¿½ï¿½
   */
 int main(void)
 {
-  /* ÏµÍ³Ê±ÖÓ³õÊ¼»¯³É168 MHz */
+  /* ÏµÍ³Ê±ï¿½Ó³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½168 MHz */
   SystemClock_Config();
 
-	/*·äÃùÆ÷¶Ë¿Ú³õÊ¼»¯ */
+	/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¿Ú³ï¿½Ê¼ï¿½ï¿½ */
 	// BEEP_GPIO_Config(); 
 
-	/* ¿ØÖÆIO */
+	/* ï¿½ï¿½ï¿½ï¿½IO */
 	while (1)
 	{
     BEEP_TOGGLE;
@@ -48,7 +50,7 @@ int main(void)
 
 
 
-void Delay(__IO uint32_t nCount)	 //¼òµ¥µÄÑÓÊ±º¯Êý
+void Delay(__IO uint32_t nCount)	 //ï¿½òµ¥µï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
 {
 	for(; nCount != 0; nCount--);
 }
@@ -121,5 +123,8 @@ void Delay(__IO uint32_t nCount)	 //¼òµ¥µÄÑÓÊ±º¯Êý
     __HAL_FLASH_PREFETCH_BUFFER_ENABLE();
   }
 }
+
+//vApplicationGetIdleTaskMemory()
+
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

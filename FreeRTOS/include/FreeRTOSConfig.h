@@ -52,6 +52,9 @@
 #define configUSE_16_BIT_TICKS		0
 #define configIDLE_SHOULD_YIELD		1
 
+//给定时期任务提供的栈深度,一般是configMINIMAL_STACK_SIZE的二倍
+#define configTIMER_TASK_STACK_DEPTH 256
+
 /* Co-routine definitions. */
 #define configUSE_CO_ROUTINES 		0
 #define configMAX_CO_ROUTINE_PRIORITIES ( 2 )
@@ -88,6 +91,16 @@ NVIC value of 255. */
 #define vPortSVCHandler     SVC_Handler
 #define xPortPendSVHandler  PendSV_Handler
 #define INCLUDE_xTaskGetSchedulerState 1
+
+
+/*开启静态创建*/
+#define configSUPPORT_STATIC_ALLOCATION 1
+
+/*开启软件定时器*/
+#define configUSE_TIMERS 1
+
+/*自动配置空闲任务内存资源功能开启*/
+#define configKERNEL_PROVIDED_STATIC_MEMORY 1
 
 #endif /* FREERTOS_CONFIG_H */
 

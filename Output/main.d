@@ -69,3 +69,4 @@
 ..\output\main.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h
 ..\output\main.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h
 ..\output\main.o: ..\User\./beep/bsp_beep.h
+..\output\main.o: ..\FreeRTOS\include\task.h

@@ -10,7 +10,3 @@
 ..\output\tasks.o: ..\FreeRTOS\include\deprecated_definitions.h
 ..\output\tasks.o: ..\FreeRTOS\portble\RVDS\ARM_CM3\portmacro.h
 ..\output\tasks.o: ..\FreeRTOS\include\mpu_wrappers.h
-..\output\tasks.o: ..\FreeRTOS\include\task.h
-..\output\tasks.o: ..\FreeRTOS\include\list.h
-..\output\tasks.o: ..\FreeRTOS\include\timers.h
-..\output\tasks.o: ..\FreeRTOS\include\stack_macros.h

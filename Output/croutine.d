@@ -8,6 +8,3 @@
 ..\output\croutine.o: ..\FreeRTOS\include\deprecated_definitions.h
 ..\output\croutine.o: ..\FreeRTOS\portble\RVDS\ARM_CM3\portmacro.h
 ..\output\croutine.o: ..\FreeRTOS\include\mpu_wrappers.h
-..\output\croutine.o: ..\FreeRTOS\include\task.h
-..\output\croutine.o: ..\FreeRTOS\include\list.h
-..\output\croutine.o: ..\FreeRTOS\include\croutine.h

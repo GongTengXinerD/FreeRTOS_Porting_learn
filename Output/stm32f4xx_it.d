@@ -77,5 +77,3 @@
 ..\output\stm32f4xx_it.o: ..\FreeRTOS\include\deprecated_definitions.h
 ..\output\stm32f4xx_it.o: ..\FreeRTOS\portble\RVDS\ARM_CM3\portmacro.h
 ..\output\stm32f4xx_it.o: ..\FreeRTOS\include\mpu_wrappers.h
-..\output\stm32f4xx_it.o: ..\FreeRTOS\include\task.h
-..\output\stm32f4xx_it.o: ..\FreeRTOS\include\list.h

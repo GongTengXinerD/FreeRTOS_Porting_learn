@@ -10,6 +10,3 @@
 ..\output\queue.o: ..\FreeRTOS\include\deprecated_definitions.h
 ..\output\queue.o: ..\FreeRTOS\portble\RVDS\ARM_CM3\portmacro.h
 ..\output\queue.o: ..\FreeRTOS\include\mpu_wrappers.h
-..\output\queue.o: ..\FreeRTOS\include\task.h
-..\output\queue.o: ..\FreeRTOS\include\list.h
-..\output\queue.o: ..\FreeRTOS\include\queue.h

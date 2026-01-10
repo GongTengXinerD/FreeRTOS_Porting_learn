@@ -9,7 +9,3 @@
 ..\output\event_groups.o: ..\FreeRTOS\include\deprecated_definitions.h
 ..\output\event_groups.o: ..\FreeRTOS\portble\RVDS\ARM_CM3\portmacro.h
 ..\output\event_groups.o: ..\FreeRTOS\include\mpu_wrappers.h
-..\output\event_groups.o: ..\FreeRTOS\include\task.h
-..\output\event_groups.o: ..\FreeRTOS\include\list.h
-..\output\event_groups.o: ..\FreeRTOS\include\timers.h
-..\output\event_groups.o: ..\FreeRTOS\include\event_groups.h
