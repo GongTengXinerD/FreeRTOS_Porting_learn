@@ -1,55 +1,19 @@
-*** Using Compiler 'V5.06 update 1 (build 61)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\keil538\ARM\ARM_Compiler_5\Bin'
 Build target 'ADC'
-compiling list.c...
-..\FreeRTOS\include\FreeRTOS.h(519): error:  #35: #error directive: If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-          #error If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-..\FreeRTOS\source\list.c: 0 warnings, 1 error
-compiling tasks.c...
-..\FreeRTOS\include\FreeRTOS.h(519): error:  #35: #error directive: If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-          #error If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-..\FreeRTOS\source\tasks.c: 0 warnings, 1 error
-compiling led.c...
-..\User\led\led.h(5): warning:  #1-D: last line of file ends without a newline
-  void task_static_create(void);
-..\FreeRTOS\include\FreeRTOS.h(519): error:  #35: #error directive: If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-          #error If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-..\User\led\led.c: 1 warning, 1 error
-compiling heap_4.c...
-..\FreeRTOS\include\FreeRTOS.h(519): error:  #35: #error directive: If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-          #error If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-..\FreeRTOS\portble\MemMang\heap_4.c: 0 warnings, 1 error
-compiling port.c...
-..\FreeRTOS\include\FreeRTOS.h(519): error:  #35: #error directive: If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-          #error If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-..\FreeRTOS\portble\RVDS\ARM_CM3\port.c: 0 warnings, 1 error
-compiling croutine.c...
-..\FreeRTOS\include\FreeRTOS.h(519): error:  #35: #error directive: If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-          #error If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-..\FreeRTOS\source\croutine.c: 0 warnings, 1 error
-compiling stream_buffer.c...
-..\FreeRTOS\include\FreeRTOS.h(519): error:  #35: #error directive: If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-          #error If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-..\FreeRTOS\source\stream_buffer.c: 0 warnings, 1 error
-compiling timers.c...
-..\FreeRTOS\include\FreeRTOS.h(519): error:  #35: #error directive: If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-          #error If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-..\FreeRTOS\source\timers.c: 0 warnings, 1 error
-compiling queue.c...
-..\FreeRTOS\include\FreeRTOS.h(519): error:  #35: #error directive: If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-          #error If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-..\FreeRTOS\source\queue.c: 0 warnings, 1 error
-compiling event_groups.c...
-..\FreeRTOS\include\FreeRTOS.h(519): error:  #35: #error directive: If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-          #error If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-..\FreeRTOS\source\event_groups.c: 0 warnings, 1 error
 compiling main.c...
-..\FreeRTOS\include\task.h(34): error:  #35: #error directive: "include FreeRTOS.h must appear in source files before include task.h"
-      #error "include FreeRTOS.h must appear in source files before include task.h"
-..\User\main.c: 0 warnings, 1 error
-compiling stm32f4xx_it.c...
-..\FreeRTOS\include\FreeRTOS.h(519): error:  #35: #error directive: If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-          #error If configUSE_TIMERS is set to 1 then configTIMER_TASK_PRIORITY must also be defined.
-..\User\stm32f4xx_it.c: 0 warnings, 1 error
-"..\Output\YH-F407.axf" - 12 Error(s), 1 Warning(s).
-Target not created.
-Build Time Elapsed:  00:00:16
+..\User\led\bsp_led.h(46): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\User\demo_func.h(9): warning:  #1295-D: Deprecated declaration task_led - give arg types
+  void task_led();        //led1任务
+..\User\demo_func.h(10): warning:  #1295-D: Deprecated declaration task_key1 - give arg types
+  void task_key1();        //led2任务
+..\User\demo_func.h(11): warning:  #1295-D: Deprecated declaration task_key2 - give arg types
+  void task_key2();        //key任务
+..\User\demo_func.h(15): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\User\main.c: 5 warnings, 0 errors
+linking...
+Program Size: Code=4316 RO-data=448 RW-data=80 ZI-data=1224  
+FromELF: creating hex file...
+"..\Output\YH-F407.axf" - 0 Error(s), 5 Warning(s).
+Build Time Elapsed:  00:00:02

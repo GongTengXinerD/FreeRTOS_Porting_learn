@@ -10,14 +10,14 @@
       <TargetName>ADC</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060061::V5.06 update 1 (build 61)::ARMCC</pCCUsed>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARM_Compiler_5</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F407ZGTx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F4xx_DFP.2.15.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>Keil.STM32F4xx_DFP.3.0.0</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00020000) IRAM2(0x10000000,0x00010000) IROM(0x08000000,0x00100000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -184,6 +184,9 @@
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
             <RvdsVP>2</RvdsVP>
+            <RvdsMve>0</RvdsMve>
+            <RvdsCdeCp>0</RvdsCdeCp>
+            <nBranchProt>0</nBranchProt>
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -350,7 +353,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
-            <uClangAs>0</uClangAs>
+            <ClangAsOpt>4</ClangAsOpt>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -752,14 +755,14 @@
               <FilePath>..\User\stm32f4xx_it.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_beep.c</FileName>
+              <FileName>bsp_led.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\User\beep\bsp_beep.c</FilePath>
+              <FilePath>..\User\led\bsp_led.c</FilePath>
             </File>
             <File>
-              <FileName>led.c</FileName>
+              <FileName>demo_func.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\User\led\led.c</FilePath>
+              <FilePath>..\User\demo_func.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -847,5 +850,14 @@
     <components/>
     <files/>
   </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>YH-F407</LayName>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>

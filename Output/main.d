@@ -7,7 +7,7 @@
 ..\output\main.o: ..\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
 ..\output\main.o: ..\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h
 ..\output\main.o: ..\Libraries\CMSIS\Include\core_cm4.h
-..\output\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\main.o: D:\keil538\ARM\ARM_Compiler_5\Bin\..\include\stdint.h
 ..\output\main.o: ..\Libraries\CMSIS\Include\core_cmInstr.h
 ..\output\main.o: ..\Libraries\CMSIS\Include\cmsis_armcc.h
 ..\output\main.o: ..\Libraries\CMSIS\Include\core_cmFunc.h
@@ -15,7 +15,7 @@
 ..\output\main.o: ..\Libraries\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h
 ..\output\main.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
 ..\output\main.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
-..\output\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\output\main.o: D:\keil538\ARM\ARM_Compiler_5\Bin\..\include\stdio.h
 ..\output\main.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
 ..\output\main.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h
 ..\output\main.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h
@@ -68,5 +68,5 @@
 ..\output\main.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h
 ..\output\main.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h
 ..\output\main.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_hcd.h
-..\output\main.o: ..\User\./beep/bsp_beep.h
-..\output\main.o: ..\FreeRTOS\include\task.h
+..\output\main.o: ..\User\led\bsp_led.h
+..\output\main.o: ..\User\demo_func.h

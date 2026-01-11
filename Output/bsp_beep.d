@@ -3,7 +3,7 @@
 ..\output\bsp_beep.o: ..\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
 ..\output\bsp_beep.o: ..\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h
 ..\output\bsp_beep.o: ..\Libraries\CMSIS\Include\core_cm4.h
-..\output\bsp_beep.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\bsp_beep.o: D:\keil538\ARM\ARM_Compiler_5\Bin\..\include\stdint.h
 ..\output\bsp_beep.o: ..\Libraries\CMSIS\Include\core_cmInstr.h
 ..\output\bsp_beep.o: ..\Libraries\CMSIS\Include\cmsis_armcc.h
 ..\output\bsp_beep.o: ..\Libraries\CMSIS\Include\core_cmFunc.h
@@ -15,7 +15,7 @@
 ..\output\bsp_beep.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h
 ..\output\bsp_beep.o: ..\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
 ..\output\bsp_beep.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
-..\output\bsp_beep.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\output\bsp_beep.o: D:\keil538\ARM\ARM_Compiler_5\Bin\..\include\stdio.h
 ..\output\bsp_beep.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
 ..\output\bsp_beep.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h
 ..\output\bsp_beep.o: ..\Libraries\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h

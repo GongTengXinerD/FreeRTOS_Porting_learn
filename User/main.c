@@ -16,44 +16,45 @@
   */
 
 /* Includes ------------------------------------------------------------------*/
+
 #include "main.h"
 #include "stm32f4xx.h"
-#include "./beep/bsp_beep.h"
+#include "bsp_led.h"
+#include "demo_func.h"
+//#include "task.h"
 
-#include "task.h"
-
-
-
-void Delay(__IO uint32_t nCount); 
-
-/**
-  * @brief  ������
-  * @param  ��
-  * @retval ��
-  */
 int main(void)
 {
-  /* ϵͳʱ�ӳ�ʼ����168 MHz */
+  //初始化时钟168MHz
   SystemClock_Config();
 
-	/*�������˿ڳ�ʼ�� */
-	// BEEP_GPIO_Config(); 
+  //GPIO初始化
+  LED_GPIO_Config();
+  KEY_GPIO_Config();
 
-	/* ����IO */
-	while (1)
-	{
-    BEEP_TOGGLE;
-		Delay(0xFFFFFF);
+  //FreeRTOS启动
+  freertos_start();   
 
-	}
+  // while(1)
+  // {
+
+  //   // control_led(LEDR_GPIO_PORT, LEDR_PIN, ON);
+  //   int state;
+  //   state = state_key(KEY1_GPIO_PORT, KEY1_PIN);
+  //   if(state == ON)
+  //   {
+  //     closeAllLed();
+  //     control_led(LEDB_GPIO_PORT, LEDB_PIN, ON);
+  //   }else{
+	// 		closeAllLed();
+	// 		control_led(LEDR_GPIO_PORT, LEDR_PIN, ON);
+	// 	}
+  // }
+
 }
 
 
 
-void Delay(__IO uint32_t nCount)	 //�򵥵���ʱ����
-{
-	for(; nCount != 0; nCount--);
-}
 
 
 

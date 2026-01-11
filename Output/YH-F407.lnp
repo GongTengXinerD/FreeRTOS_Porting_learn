@@ -1,4 +1,4 @@
---cpu=Cortex-M4.fp
+--cpu=Cortex-M4.fp.sp
 "..\output\startup_stm32f407xx.o"
 "..\output\system_stm32f4xx.o"
 "..\output\stm32f4xx_hal.o"
@@ -70,8 +70,8 @@
 "..\output\stm32f4xx_ll_usb.o"
 "..\output\main.o"
 "..\output\stm32f4xx_it.o"
-"..\output\bsp_beep.o"
-"..\output\led.o"
+"..\output\bsp_led.o"
+"..\output\demo_func.o"
 "..\output\croutine.o"
 "..\output\event_groups.o"
 "..\output\list.o"
