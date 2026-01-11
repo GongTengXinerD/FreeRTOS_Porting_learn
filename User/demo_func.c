@@ -1,5 +1,7 @@
 /*功能*/
-//闪烁红光，按下key1后闪烁蓝光，按下按键2后闪烁绿光
+//任务一：实现红灯亮
+//任务二：按下key1后仅蓝灯亮
+//任务三：key2按下后仅绿灯亮
 #include "stdio.h"
 #include "demo_func.h"
 #include "bsp_led.h"
@@ -96,17 +98,24 @@ void task_create()
     taskEXIT_CRITICAL();                 //退出临界区
     vTaskDelete(NULL);                   //启动任务使命完成，直接删除，上述功能任务创建完成后会直接进行运行
 }
+//任务一：实现红灯亮
 void task_led()
 {
     while(1)
     {
         printf("task_led执行中\n");
         taskENTER_CRITICAL();  // 进入临界区
+        // 只有在RED状态时才让红灯亮，其他状态时保持红灯关闭
         if(led_state == LED_STATE_RED)
         {
-            control_led(LEDR_GPIO_PORT, LEDR_PIN, ON);
+            control_led(LEDR_GPIO_PORT, LEDR_PIN, ON);  // 红灯亮
             control_led(LEDB_GPIO_PORT, LEDB_PIN, OFF);
             control_led(LEDG_GPIO_PORT, LEDG_PIN, OFF);
+        }
+        else
+        {
+            // 非RED状态时，确保红灯关闭（由其他任务控制LED）
+            control_led(LEDR_GPIO_PORT, LEDR_PIN, OFF);
         }
         taskEXIT_CRITICAL();  // 退出临界区
         vTaskDelay(500);
@@ -114,6 +123,7 @@ void task_led()
 }
 
 
+//任务二：按下key1后仅蓝灯亮
 void task_key1()
 {
     while(1)
@@ -124,19 +134,18 @@ void task_key1()
         if(state == ON)
         {
             taskENTER_CRITICAL();  // 进入临界区
-            if(led_state != LED_STATE_BLUE)  // 只有在状态不是蓝灯时才改变
-            {
-                led_state = LED_STATE_BLUE;  // 改变状态为蓝灯
-                control_led(LEDR_GPIO_PORT, LEDR_PIN, OFF);
-                control_led(LEDB_GPIO_PORT, LEDB_PIN, ON);
-                control_led(LEDG_GPIO_PORT, LEDG_PIN, OFF);
-            }
+            // 按下key1后，关闭所有灯，只让蓝灯亮
+            led_state = LED_STATE_BLUE;  // 改变状态标志
+            control_led(LEDR_GPIO_PORT, LEDR_PIN, OFF);  // 关闭红灯
+            control_led(LEDB_GPIO_PORT, LEDB_PIN, ON);   // 蓝灯亮
+            control_led(LEDG_GPIO_PORT, LEDG_PIN, OFF);  // 关闭绿灯
             taskEXIT_CRITICAL();  // 退出临界区
         }
         vTaskDelay(500);
     }
 }
 
+//任务三：key2按下后仅绿灯亮
 void task_key2()
 {
     while(1)
@@ -147,13 +156,11 @@ void task_key2()
         if(state == ON)
         {
             taskENTER_CRITICAL();  // 进入临界区
-            if(led_state != LED_STATE_GREEN)  // 只有在状态不是绿灯时才改变
-            {
-                led_state = LED_STATE_GREEN;  // 改变状态为绿灯
-                control_led(LEDR_GPIO_PORT, LEDR_PIN, OFF);
-                control_led(LEDB_GPIO_PORT, LEDB_PIN, OFF);
-                control_led(LEDG_GPIO_PORT, LEDG_PIN, ON);
-            }
+            // 按下key2后，关闭所有灯，只让绿灯亮
+            led_state = LED_STATE_GREEN;  // 改变状态标志
+            control_led(LEDR_GPIO_PORT, LEDR_PIN, OFF);  // 关闭红灯
+            control_led(LEDB_GPIO_PORT, LEDB_PIN, OFF);  // 关闭蓝灯
+            control_led(LEDG_GPIO_PORT, LEDG_PIN, ON);   // 绿灯亮
             taskEXIT_CRITICAL();  // 退出临界区
         }
         vTaskDelay(500);
