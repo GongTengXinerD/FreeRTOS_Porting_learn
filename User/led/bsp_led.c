@@ -55,10 +55,10 @@ void KEY_GPIO_Config(void)
   //启动相关GPIO时钟
   __GPIOA_CLK_ENABLE();
   __GPIOC_CLK_ENABLE();
-  //设置推免输出
+  //设置为输入模式
   KEY_GPIO_Initstruct.Mode = GPIO_MODE_INPUT;
-  //设置上拉模式
-  KEY_GPIO_Initstruct.Pull = GPIO_NOPULL;
+  //按键硬件有下拉电阻，一般就不受gpio配置影响，但是还要保持一致最好
+  KEY_GPIO_Initstruct.Pull = GPIO_PULLDOWN;  
   //引脚速率为高速
   KEY_GPIO_Initstruct.Speed = GPIO_SPEED_HIGH;
   //配置KEY1

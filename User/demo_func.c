@@ -101,9 +101,16 @@ void task_create()
 //任务一：实现红灯亮
 void task_led()
 {
+    // 初始化：确保初始状态为红灯亮
+    taskENTER_CRITICAL();
+    led_state = LED_STATE_RED;
+    control_led(LEDR_GPIO_PORT, LEDR_PIN, ON);  // 红灯亮
+    control_led(LEDB_GPIO_PORT, LEDB_PIN, OFF);
+    control_led(LEDG_GPIO_PORT, LEDG_PIN, OFF);
+    taskEXIT_CRITICAL();
+    
     while(1)
     {
-        printf("task_led执行中\n");
         taskENTER_CRITICAL();  // 进入临界区
         // 只有在RED状态时才让红灯亮，其他状态时保持红灯关闭
         if(led_state == LED_STATE_RED)
@@ -118,7 +125,7 @@ void task_led()
             control_led(LEDR_GPIO_PORT, LEDR_PIN, OFF);
         }
         taskEXIT_CRITICAL();  // 退出临界区
-        vTaskDelay(500);
+        vTaskDelay(pdMS_TO_TICKS(500));
     }
 }
 
@@ -126,43 +133,81 @@ void task_led()
 //任务二：按下key1后仅蓝灯亮
 void task_key1()
 {
+    // // 启动时延时，等待GPIO状态稳定，避免误判
+    // vTaskDelay(pdMS_TO_TICKS(100));
+    
+    // // 如果启动时按键处于按下状态，等待其释放
+    // while(state_key(KEY1_GPIO_PORT, KEY1_PIN) == ON)
+    // {
+    //     vTaskDelay(pdMS_TO_TICKS(10));
+    // }
+    
     while(1)
     {
-        printf("task_key1执行中\n");
         int state;
         state = state_key(KEY1_GPIO_PORT, KEY1_PIN);
         if(state == ON)
         {
-            taskENTER_CRITICAL();  // 进入临界区
-            // 按下key1后，关闭所有灯，只让蓝灯亮
-            led_state = LED_STATE_BLUE;  // 改变状态标志
-            control_led(LEDR_GPIO_PORT, LEDR_PIN, OFF);  // 关闭红灯
-            control_led(LEDB_GPIO_PORT, LEDB_PIN, ON);   // 蓝灯亮
-            control_led(LEDG_GPIO_PORT, LEDG_PIN, OFF);  // 关闭绿灯
-            taskEXIT_CRITICAL();  // 退出临界区
+            // 按键消抖：延时10ms后再次检测
+            vTaskDelay(pdMS_TO_TICKS(10));
+            state = state_key(KEY1_GPIO_PORT, KEY1_PIN);
+            if(state == ON)
+            {
+                taskENTER_CRITICAL();  // 进入临界区
+                // 按下key1后，关闭所有灯，只让蓝灯亮
+                led_state = LED_STATE_BLUE;  // 改变状态标志
+                control_led(LEDR_GPIO_PORT, LEDR_PIN, OFF);  // 关闭红灯
+                control_led(LEDB_GPIO_PORT, LEDB_PIN, ON);   // 蓝灯亮
+                control_led(LEDG_GPIO_PORT, LEDG_PIN, OFF);  // 关闭绿灯
+                taskEXIT_CRITICAL();  // 退出临界区
+                // 等待按键释放
+                while(state_key(KEY1_GPIO_PORT, KEY1_PIN) == ON)
+                {
+                    vTaskDelay(pdMS_TO_TICKS(10));
+                }
+            }
         }
-        vTaskDelay(500);
+        vTaskDelay(pdMS_TO_TICKS(50));  // 缩短检测周期，提高响应速度
     }
 }
 
 //任务三：key2按下后仅绿灯亮
 void task_key2()
 {
+    // // 启动时延时，等待GPIO状态稳定，避免误判
+    // vTaskDelay(pdMS_TO_TICKS(100));
+    
+    // // 如果启动时按键处于按下状态，等待其释放
+    // while(state_key(KEY2_GPIO_PORT, KEY2_PIN) == ON)
+    // {
+    //     vTaskDelay(pdMS_TO_TICKS(10));
+    // }
+    
     while(1)
     {
-        printf("task_key2执行中\n");
         int state;
         state = state_key(KEY2_GPIO_PORT, KEY2_PIN);
         if(state == ON)
         {
-            taskENTER_CRITICAL();  // 进入临界区
-            // 按下key2后，关闭所有灯，只让绿灯亮
-            led_state = LED_STATE_GREEN;  // 改变状态标志
-            control_led(LEDR_GPIO_PORT, LEDR_PIN, OFF);  // 关闭红灯
-            control_led(LEDB_GPIO_PORT, LEDB_PIN, OFF);  // 关闭蓝灯
-            control_led(LEDG_GPIO_PORT, LEDG_PIN, ON);   // 绿灯亮
-            taskEXIT_CRITICAL();  // 退出临界区
+            // 按键消抖：延时10ms后再次检测
+            vTaskDelay(pdMS_TO_TICKS(10));
+            state = state_key(KEY2_GPIO_PORT, KEY2_PIN);
+            if(state == ON)
+            {
+                taskENTER_CRITICAL();  // 进入临界区
+                // 按下key2后，关闭所有灯，只让绿灯亮
+                led_state = LED_STATE_GREEN;  // 改变状态标志
+                control_led(LEDR_GPIO_PORT, LEDR_PIN, OFF);  // 关闭红灯
+                control_led(LEDB_GPIO_PORT, LEDB_PIN, OFF);  // 关闭蓝灯
+                control_led(LEDG_GPIO_PORT, LEDG_PIN, ON);   // 绿灯亮
+                taskEXIT_CRITICAL();  // 退出临界区
+                // 等待按键释放
+                while(state_key(KEY2_GPIO_PORT, KEY2_PIN) == ON)
+                {
+                    vTaskDelay(pdMS_TO_TICKS(10));
+                }
+            }
         }
-        vTaskDelay(500);
+        vTaskDelay(pdMS_TO_TICKS(50));  // 缩短检测周期，提高响应速度
     }
 }
